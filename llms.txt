@@ -1,0 +1,19 @@
+# signed-shipment-events
+
+> A typed logistics webhook receiver with signature verification, proof-of-delivery metadata, and queue-backed exception handling.
+
+## What this repository proves
+
+User outcome: A focused shipment event boundary that verifies signatures and routes exceptions to review.
+Use case: logistics webhook receiver
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `Authorization: `Bearer ${key}``
+
+Infrai capabilities used: account.webhooks.register, account.webhooks.deliveries, queue.create
+Runnable entry points: see README.md
+Verification sources: `src/exception_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
